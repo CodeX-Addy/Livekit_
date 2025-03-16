@@ -38,6 +38,6 @@ class AssistantFnc(llm.FunctionContext):
         zone: Annotated[Zone, llm.TypeInfo(description="The specific zone")],
         temp: Annotated[int, llm.TypeInfo(description="The temperature to set")],
     ):
-        logger.info("Set temo - zone %s, temp: %s", zone, temp)
+        logger.info("Set temp - zone %s, temp: %s", zone, temp)
         self._temperature[Zone(zone)] = temp
         return f"The temperature in the {zone} is now {temp}C"
