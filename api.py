@@ -16,7 +16,6 @@ class Zone(enum.Enum):
 class AssistantFnc(llm.FunctionContext):
     def __init__(self) -> None:
         super().__init__()
-
         self._temperature = {
             Zone.LIVING_ROOM: 22,
             Zone.BEDROOM: 20,
