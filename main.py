@@ -7,6 +7,7 @@ from livekit.agents import AutoSubscribe, JobContext, WorkerOptions, cli, llm
 
 load_dotenv()
 
+## Entrypoint
 async def entrypoint(ctx: JobContext):
     initial_ctx = llm.ChatContext().append(
         role="system",
