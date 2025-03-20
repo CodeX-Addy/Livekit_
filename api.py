@@ -40,4 +40,4 @@ class AssistantFnc(llm.FunctionContext):
     ):
         logger.info("Set temp - zone %s, temp: %s", zone, temp)
         self._temperature[Zone(zone)] = temp
-        return f"The temperature in the {zone} is now {temp}C"
+        return f"The temperature in the {zone} is {temp}C"
