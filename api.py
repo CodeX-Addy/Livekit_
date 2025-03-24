@@ -30,7 +30,7 @@ class AssistantFnc(llm.FunctionContext):
     ):
         logger.info("get temp - zone %s", zone)
         temp = self._temperature[Zone(zone)]
-        return f"The temperature in the {zone} is {temp}C"
+        return f"The temperature in the {zone} is {temp}*C"
 
     @llm.ai_callable(description="Set the temperature in a specific room")
     def set_temperature(
@@ -40,4 +40,4 @@ class AssistantFnc(llm.FunctionContext):
     ):
         logger.info("Set temp - zone %s, temp: %s", zone, temp)
         self._temperature[Zone(zone)] = temp
-        return f"The temperature in the {zone} is {temp}C"
+        return f"The temperature in the {zone} is {temp}*C"
