@@ -13,7 +13,7 @@ async def entrypoint(ctx: JobContext):
         role="system",
         text=(
             "You are a voice assistant created by LiveKit. Your interface with users will be only voice."
-            "You should use short and concise responses, and avoiding usage of unpronouncable punctuation."
+            "You should use brief and concise responses, and avoiding usage of unpronouncable punctuation."
         ),
     )
     await ctx.connect(auto_subscribe=AutoSubscribe.AUDIO_ONLY)
